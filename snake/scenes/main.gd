@@ -2,24 +2,24 @@ extends Node
 
 @export var snake_scene : PackedScene
 
-#game variables
+#jatek valtozok
 var score : int
 var game_started : bool = false
 
-#grid variables
+#tablazat valtozok
 var cells : int = 20
 var cell_size : int = 50
 
-#food variables
+#kaja valtozok
 var food_pos : Vector2
 var regen_food : bool = true
 
-#snake variables
+#snake valtozok
 var old_data : Array
 var snake_data : Array
 var snake : Array
 
-#movement variables
+#mozgas valtozok
 var start_pos = Vector2(9, 9)
 var up = Vector2(0, -1)
 var down = Vector2(0, 1)
@@ -28,7 +28,7 @@ var right = Vector2(1, 0)
 var move_direction : Vector2
 var can_move: bool
 
-# Called when the node enters the scene tree for the first time.
+# akkor hivjuk meg ha keszen all a jatek
 func _ready():
 	new_game()
 	
@@ -47,7 +47,7 @@ func generate_snake():
 	old_data.clear()
 	snake_data.clear()
 	snake.clear()
-	#starting with the start_pos, create tail segments vertically down
+	#a start_pos tol lefele general farkat a snakenek
 	for i in range(3):
 		add_segment(start_pos + Vector2(0, i))
 		
@@ -58,13 +58,13 @@ func add_segment(pos):
 	add_child(SnakeSegment)
 	snake.append(SnakeSegment)
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# minden frame-ben meg van hivva, a delta a ket frame kozotti ido
 func _process(delta):
 	move_snake()
 	
 func move_snake():
 	if can_move:
-		#update movement from keypresses
+		#mozgas frissitese ha gomb le van nyomva
 		if Input.is_action_just_pressed("move_down") and move_direction != up:
 			move_direction = down
 			can_move = false
@@ -94,11 +94,11 @@ func start_game():
 func _on_move_timer_timeout():
 	#allow snake movement
 	can_move = true
-	#use the snake's previous position to move the segments
+	#a snake elozo poziciojat felhasznalva mozgatjuk a kockakat
 	old_data = [] + snake_data
 	snake_data[0] += move_direction
 	for i in range(len(snake_data)):
-		#move all the segments along by one
+		#a snake minden kockajat egyel elorebb visszuk
 		if i > 0:
 			snake_data[i] = old_data[i - 1]
 		snake[i].position = (snake_data[i] * cell_size) + Vector2(0, cell_size)
@@ -116,7 +116,7 @@ func check_self_eaten():
 			end_game()
 			
 func check_food_eaten():
-	#if snake eats the food, add a segment and move the food
+	#ha a snake megesyi a gyumit akkor nojon meg egyel es csinaljon uj gyumit
 	if snake_data[0] == food_pos:
 		score += 1
 		$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
