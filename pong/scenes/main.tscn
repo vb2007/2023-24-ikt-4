@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://diye8ajuwfl33"]
+[gd_scene load_steps=12 format=3 uid="uid://diye8ajuwfl33"]
 
 [ext_resource type="Texture2D" uid="uid://bd71bv627fwjr" path="res://assets/background.png" id="1_eknuv"]
 [ext_resource type="FontFile" uid="uid://lmspvdys0717" path="res://assets/pixel_font.ttf" id="2_5ky86"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="2_fh0hq"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="3_jinjv"]
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="4_7gc7t"]
+[ext_resource type="Script" path="res://scenes/ball.gd" id="4_fyat7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt2kq"]
 size = Vector2(20, 120)
@@ -27,6 +30,7 @@ script = ExtResource("2_fh0hq")
 
 [node name="Player" type="StaticBody2D" parent="."]
 position = Vector2(50, 324)
+script = ExtResource("3_jinjv")
 
 [node name="ColorRect" type="ColorRect" parent="Player"]
 anchors_preset = 4
@@ -43,6 +47,7 @@ shape = SubResource("RectangleShape2D_vt2kq")
 
 [node name="Enemy" type="StaticBody2D" parent="."]
 position = Vector2(1082, 324)
+script = ExtResource("4_7gc7t")
 
 [node name="ColorRect" type="ColorRect" parent="Enemy"]
 anchors_preset = 4
@@ -60,6 +65,7 @@ shape = SubResource("RectangleShape2D_vt2kq")
 [node name="Ball" type="CharacterBody2D" parent="."]
 position = Vector2(576, 324)
 collision_mask = 3
+script = ExtResource("4_fyat7")
 
 [node name="ColorRect" type="ColorRect" parent="Ball"]
 anchors_preset = 8
@@ -129,3 +135,7 @@ vertical_alignment = 1
 [node name="BallTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[connection signal="body_exited" from="ScoreLeft" to="." method="_on_score_left_body_exited"]
+[connection signal="body_entered" from="ScoreRight" to="." method="_on_score_right_body_entered"]
+[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
