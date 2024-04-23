@@ -3,7 +3,6 @@ extends Sprite2D
 var score := [0, 0] #array, 1. a player, 2. az enemy
 const paddleSpeed : int = 500
 
-
 func _on_ball_timer_timeout():
 	$Ball.newBall()
 
