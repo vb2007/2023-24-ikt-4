@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://clhxp8vank88u"]
+[gd_scene load_steps=9 format=3 uid="uid://clhxp8vank88u"]
 
-[ext_resource type="Texture2D" uid="uid://rucb6n1u5r6h" path="res://img/test.png" id="1_yq3oe"]
+[ext_resource type="Texture2D" uid="uid://rucb6n1u5r6h" path="res://img/test.png" id="1_lg4o4"]
+[ext_resource type="Script" path="res://script/SnakeLaunch.gd" id="2_1nhp2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q16sl"]
 bg_color = Color(0.207843, 0.207843, 0.207843, 1)
@@ -97,13 +98,15 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_yq3oe")
+texture = ExtResource("1_lg4o4")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Button" type="Button" parent="Background/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
-text = "Download Now"
+text = "Download"
+script = ExtResource("2_1nhp2")
 
 [node name="MarginContainer2" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/Panel"]
 layout_mode = 0
@@ -128,13 +131,14 @@ vertical_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="Background/MarginContainer/VBoxContainer/Panel/MarginContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("1_yq3oe")
+texture = ExtResource("1_lg4o4")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Button" type="Button" parent="Background/MarginContainer/VBoxContainer/Panel/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
-text = "Download Now"
+text = "Download"
 
 [node name="MarginContainer3" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/Panel"]
 layout_mode = 0
@@ -159,10 +163,11 @@ vertical_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="Background/MarginContainer/VBoxContainer/Panel/MarginContainer3/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("1_yq3oe")
+texture = ExtResource("1_lg4o4")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Button" type="Button" parent="Background/MarginContainer/VBoxContainer/Panel/MarginContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
-text = "Download Now"
+text = "Download"
