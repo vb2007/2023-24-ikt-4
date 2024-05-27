@@ -1,9 +1,17 @@
+/* ******* */
+/* Teljes oldal dizájnja */
+/* ******* */
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+/* ******* */
+/* Navbar dizájnja */
+/* ******* */
 
 .navbar {
     background-color: #131313;
@@ -127,6 +135,7 @@
     transition: all 0.3s ease;
 }
 
+/* reszponzivitás */
 @media screen and (max-width: 960px) {
     .navbar-container {
         display: flex;
@@ -158,7 +167,7 @@
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
-        height: 50vh;
+        height: 50vh; /* 50vh = az képernyő 50 százaléke */
         font-size: 1.6rem; 
     }
 
@@ -220,5 +229,179 @@
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* ******* */
+/* Oldal első szekciójának dizájnja */
+/* ******* */
+
+.main {
+    background-color: #131313;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.main-content h1 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main-content h2 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ffb199 0%, #ff0844 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main-content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main-button {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main-button a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-button::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color: #4837ff;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main-button:hover {
+    color: #fff;
+}
+
+.main-button:hover::after {
+    width: 100%;
+}
+
+.main-image-container {
+    text-align: center;
+}
+
+#main-image {
+    height: 80%;
+    width: 80%;
+}
+
+/* reszponzivitás */
+@media screen and (max-width: 768px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 90vh;
+    }
+
+    .main-content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main-content h2 {
+        font-size: 3rem;
+    }
+
+    .main-content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main-content h2 {
+        font-size: 2rem;
+    }
+
+    .main-content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .main-button {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 36px;
+        padding-right: 36px;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
