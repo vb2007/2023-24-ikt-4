@@ -3,8 +3,11 @@
 <head>
     <!-- Metaadatok -->
     <meta charset="UTF-8">
-    <meta name="author" content="Byte Bloom Innovations Kft.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ByteBloom Game Launcher">
+    <meta name="description" content="Egy promóoldal, ami a ByteBloom Innovations Kft. vállalat játékindítóját és játékait mutatja be.">
+    <meta name="keywords" content="bytebloom, game, launcher, pong, snake, minesweeper, free, play">
+    <meta name="author" content="vb2007">
     <!-- Oldal címe -->
     <title>Byte Bloom Innovations</title>
     <!-- 3rd party import -->
@@ -35,14 +38,15 @@
                     <a href="/" class="navbar-link">Home</a>
                 </li>
                 <li class="navbar-button">
-                    <a href="/" class="button">Játsz!</a>
+                    <a href="/" class="button">Játék!</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!-- Main content -->
     <main>
-        <div class="main"></div>
+        <!-- Main page -->
+        <div class="main">
             <div class="main-container">
                 <div class="main-content">
                     <h1>ByteBloom</h1>
@@ -50,15 +54,35 @@
                     <p>Néhány cégünk által készített játék az idő elütésére.</p>
                     <button class="main-button"><a href="/">Játékok kipróbálása</a></button>
                     <div class="main-image-container">
-                        <img id="main-image" src="" title="" alt="">
+                        <img id="main-image" src="./asset/img/mainpage_console.svg" title="Generic console image" alt="Generic console image">
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Games page -->
+        <div class="game">
+            <h1>Nézz rá az első játékunkra</h1>
+            <div class="game-container">
+                <div class="game-card">
+                    <h2>Az egyik légszórakosztatóbb kiadásunk</h2>
+                    <p>Tetris</p>
+                    <button>Kipróbálás</button>
+                </div>
+                <div class="game-card">
+                    <h2>Az egyik légszórakosztatóbb kiadásunk</h2>
+                    <p>Tetris</p>
+                    <button>Kipróbálás</button>
                 </div>
             </div>
         </div>
     </main>
     <!-- Footer -->
     <footer>
-        
+        <div class="footer-container">
+            <div class="footer">
+                <p>ByteBloom Innovations Kft. - 2024</p>
+            </div>
+        </div>
     </footer>
     <!-- Script import -->
     <script src="./asset/js/script.js"></script>
