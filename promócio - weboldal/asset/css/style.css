@@ -9,6 +9,13 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #131313;
+}
+
 /* ******* */
 /* Navbar dizájnja */
 /* ******* */
@@ -44,8 +51,8 @@
 
 /* "ByteBloom" szöveg a navbarban */
 #navbar-logo {
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ff8177 100%);
+    background-color: #2555f3; /* ha nem menne a színátmenet... */
+    background-image: linear-gradient(to top, #781cb4 0%, #4e76f0 65%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -93,11 +100,11 @@
 
 /* ha azokra a hivatkozásokra visszük a kurzort... */
 .navbar-link:hover {
-    color: #f77062;
+    color: #4e76f0;
     transition: all 0.3s ease;
 }
 
-/* A "Játsz!" gomb listaeleme a navbarban */
+/* A "Launcher" gomb listaeleme a navbarban */
 .navbar-button {
     display: flex;
     justify-content: center;
@@ -109,7 +116,7 @@
     width: 100%;
 }
 
-/* A "Játsz!" gomb a navbarban */
+/* A "Launcher" gomb a navbarban */
 .button {
     display: flex;
     justify-content: center;
@@ -452,10 +459,11 @@
         to bottom,
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.6) 100%
-    ), url("../img/game-launcher.jpeg");
+    ), url("../img/game-launcher.jpg");
     background-size: cover;
     position: relative;
     color: #ffffff;
+    transition: 0.2s ease-in;
 }
 
 /* második kártya a az oldal következő fő részén */
@@ -464,19 +472,27 @@
         to bottom,
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.6) 100%
-    ), url("../img/game-launcher-2.jpeg");
+    ), url("../img/game-launcher.jpg");
 }
 
 .game h2 {
     position: absolute;
-    top: 350px;
+    top: 300px;
     left: 30px;
 }
 
 .game-card p {
     position: absolute;
-    top: 400px;
+    top: 350px;
     left: 30px;
+}
+
+.game-card a {
+    text-decoration: none;
+}
+
+.game-card a:hover {
+    color: #fff;
 }
 
 .game-card button {
@@ -498,7 +514,7 @@
 
 /* megnöveli a kártya méretét ha ráhúzzuk az egeret */
 .game-card:hover {
-    transform: scale(1.075);
+    transform: scale(1.05);
     transition: 0.2s ease-in;
     cursor: pointer;
 }
@@ -539,7 +555,7 @@
     max-height: 20px;
     justify-content: center;
     display: block;
-    margin-top: 0px;
+    margin-top: auto;
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
