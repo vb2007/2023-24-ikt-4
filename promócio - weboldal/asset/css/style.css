@@ -131,14 +131,14 @@ body {
     border: none;
     outline: none;
     border-radius: 4px;
-    background-color: #f77162;
+    background-color: #392bd6;
     color: #ffffff;
     transition: all 0.3s ease;
 }
 
 /* ha arra a "Játsz!" gombra visszük a kurzort... */
 .button:hover {
-    background-color: #4837ff;
+    background-color: #e2612e;
     transition: all 0.3s ease;
 }
 
@@ -269,8 +269,8 @@ body {
 
 .main-content h1 {
     font-size: 4rem;
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-color: #d1b7b5;
+    background-image: linear-gradient(to top, #5920f8 0%, #423ffd 50%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -282,7 +282,7 @@ body {
 .main-content h2 {
     font-size: 4rem;
     background-color: #ff8177;
-    background-image: linear-gradient(to top, #ffb199 0%, #ff0844 100%);
+    background-image: linear-gradient(to top, #423ffd 0%, #5920f8 50%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
