@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+var player_script: GDScript
+
 var ballPosition : Vector2 #mivel kell tudnia a labda helyzetét, hogy felé mozogjon...
 var distance : int
 var moveBy : int #milyen messze mozoghat...
@@ -23,3 +25,6 @@ func _process(delta):
 	position.y -= moveBy
 	
 	position.y = clamp(position.y, paddleHeight / 2, windowHeight - paddleHeight / 2)
+
+func get_random_color():
+	return Color(randf(), randf(), randf())

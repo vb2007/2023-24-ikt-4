@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+var player_script: GDScript
+var enemy_script: GDScript
+
 var windowSize : Vector2
 const startSpeed : int = 500
 const acceleration : int = 50
@@ -10,6 +13,8 @@ const maxYVector : float = 0.6
 #amint a labda "létre lesz hozva", futtatjuk ezt a cuccot
 func _ready():
 	windowSize = get_viewport_rect().size
+	player_script = load("res://scenes/player.gd")
+	enemy_script = load("res://scenes/enemy.gd")
 
 #találat esetén visszarakja középre a labdát, és random indulási irányt ad neki
 #(BallTimer fogja meghívni)
@@ -26,6 +31,14 @@ func randomDirection():
 	newDirection.y = randf_range(-1, 1)
 	return newDirection.normalized()
 
+func change_player_color(player):
+	var new_color = player_script.new().get_random_color()
+	player.get_node("ColorRect").color = new_color
+
+func change_enemy_color(enemy):
+	var new_color = enemy_script.new().get_random_color()
+	enemy.get_node("ColorRect").color = new_color
+
 #labda mozgásának kezelése
 #(+deltaTime, framerate independentség, blablabla...)
 func _physics_process(delta):
@@ -35,8 +48,13 @@ func _physics_process(delta):
 	if collision:
 		collider = collision.get_collider()
 		#ha a labda csúszkát ér...
-		if collider == $"../Player" or collider == $"../Enemy":
+		if collider == $"../Player":
+			change_player_color(collider)
+			speed += acceleration
+			direction = newDirection(collider)
+		elif collider == $"../Enemy":
 			#gyorsulással visszapattan, "új irányt kap"
+			change_enemy_color(collider)
 			speed += acceleration
 			direction = newDirection(collider)
 		#ha a labda falat ér

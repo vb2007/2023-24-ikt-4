@@ -14,3 +14,6 @@ func _process(delta):
 		position.y += get_parent().paddleSpeed * delta
 	# csak az ablak széléig engedi mozgatni a player csúszkát
 	position.y = clamp(position.y, paddleHeight / 2, windowHeight - paddleHeight / 2)
+
+func get_random_color():
+	return Color(randf(), randf(), randf())
