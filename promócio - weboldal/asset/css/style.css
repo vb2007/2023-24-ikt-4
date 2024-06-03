@@ -269,7 +269,7 @@ body {
 
 .main-content h1 {
     font-size: 4rem;
-    background-color: #d1b7b5;
+    background-color: #5920f8;
     background-image: linear-gradient(to top, #5920f8 0%, #423ffd 50%);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -280,9 +280,10 @@ body {
 }
 
 .main-content h2 {
+    padding-left: 10px; /* valamiért kilóg a "J" picit ezzel a betűtípussal... */
     font-size: 4rem;
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #423ffd 0%, #5920f8 50%);
+    background-color: #423ffd;
+    background-image: linear-gradient(to top, #423ffd 0%, #5920f8 20%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -300,7 +301,7 @@ body {
 
 .main-button {
     font-size: 1rem;
-    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    background-image: linear-gradient(to top, #423ffd 0%, #5920f8 100%);
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 32px;
@@ -329,7 +330,7 @@ body {
     left: 0;
     width: 0px;
     height: 100%;
-    background-color: #4837ff;
+    background-color: #e2612e;
     transition: all 0.35s;
     border-radius: 4px;
 }
@@ -428,14 +429,16 @@ body {
 .game h1 {
     background-color: #ff8177;
     background-image: linear-gradient(to right,
-    #ff8177 0%,
-    #ff867a 0%,
-    #ff8c7f 21%,
-    #f99185 52%,
-    #cf556c 78%,
-    #b12a5b 100%);
+    #b777ff 0%,
+    #af6efa 10%,
+    #ac67fc 21%,
+    #8644ff 52%,
+    #4744ff 78%,
+    #1915ff 100%);
     background-size: 100%;
     margin-bottom: 5rem;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 2.5rem;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -504,7 +507,7 @@ body {
     border: none;
     outline: none;
     border-radius: 4px;
-    background-color: #f77062;
+    background-color: #423ffd;
     position: absolute;
     top: 440px;
     left: 30px;
@@ -527,6 +530,8 @@ body {
 
     .game h1 {
         font-size: 2rem;
+        padding-left: 15px;
+        padding-right: 15px;
         margin-top: 12rem;
     }
 }
