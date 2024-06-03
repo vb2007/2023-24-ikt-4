@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metaadatok -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ByteBloom Games">
+    <meta name="description" content="Egy promóoldal, ami a ByteBloom Innovations Kft. vállalat játékindítóját és játékait mutatja be.">
+    <meta name="keywords" content="bytebloom, game, launcher, pong, snake, minesweeper, free, play">
+    <meta name="author" content="vb2007">
+    <!-- Oldal címe -->
+    <title>Byte Bloom Innovations</title>
+    <!-- 3rd party import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Helyi import -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/style_games.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" id="navbar-logo">ByteBloom</a>
+            <div class="navbar-toggle" id="mobile-menu"> <!-- 3 sáv ami mobilnézetben jelenik meg-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="./index.html" class="navbar-link">Főoldal</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="https://github.com/vb2007/2023-24-ikt-4" target="_blank" class="navbar-link">Forráskód</a>
+                </li>
+                <li class="navbar-button">
+                    <a href="./launcher.html" class="button">Launcher</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Oldal főrésze -->
+    <main>
+        <!-- Első rész a főoldalon -->
+        <div class="main">
+            <div class="main-container">
+                <div class="main-content">
+                    <h1>Launcherünk, Játékaink</h1>
+                    <p>Íme, itt láthatók a cégünk által fejlesztett egyszerű, de szórakoztató játékok, melyeket a Gőzzel (ami sokkal jobb, mint az Epikus Játékindító) könnyedén ki lehet próbálni.</p>
+                    <button class="main-button"><a href="/">Launcherünk letöltése</a></button>
+                </div>
+                <div class="main-image-container">
+                    <img id="main-image" src="./asset/img/game_launcher.png" title="Generic console image" alt="Generic console image">
+                </div>
+            </div>
+        </div>
+        <!-- A játékok és a Launcher szekciója -->
+        <div id="games" class="game">
+            <h1>Nem győzött meg a Launcher?<br>Nézd meg a játékokat egyesével!</h1>
+            <div class="game-container">
+                <div class="game-card">
+                    <h2>Minesweeper</h2>
+                    <p>A minesweeper (magyarul aknakereső) egy igazi klasszikus stratégiai játék, melyben a játékosnak meg kell tisztítania egy mezőt az aknáktól.</p>
+                    <a href="https://github.com/vb2007/2023-24-ikt-4/tree/main/j%C3%A1t%C3%A9kok/minesweeper"><button>Megnézem GitHub-on</button></a>
+                </div>
+                <div class="game-card">
+                    <h2>Pong</h2>
+                    <p>Egy egyszerű játék, melyben egy játékos próbálkozhat egy gépi ellenfél legyőzésével. A játékban egy labdát ütögetnek egyik oldalról a másikra a játékosok.</p>
+                    <a href="https://github.com/vb2007/2023-24-ikt-4/tree/main/j%C3%A1t%C3%A9kok/pong"><button>Megnézem GitHub-on</button></a>
+                </div>
+                
+                <div class="game-card">
+                    <h2>Snake</h2>
+                    <p>Másik retró játékunk a snake, melyben a játékosnak a reflexeire és a reakcióidejére kell támaszkodnia. A cél, hogy a játék során minnél nagyobb legyen a kígyód.</p>
+                    <a href="https://github.com/vb2007/2023-24-ikt-4/tree/main/j%C3%A1t%C3%A9kok/snake"><button>Megnézem GitHub-on</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <p>ByteBloom Innovations Kft. - 2024</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Script import -->
+    <script src="./asset/js/script.js"></script>
+</body>
+</html>

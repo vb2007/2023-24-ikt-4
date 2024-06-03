@@ -1,4 +1,8 @@
 /* az a css, ami felülírja az alap stílust a games.html oldalon */
+#main-image {
+    height: 100%;
+}
+
 .game-card {
     background-image: linear-gradient(
         to bottom,
