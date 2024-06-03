@@ -478,6 +478,10 @@ body {
     ), url("../img/card_controller.jpg");
 }
 
+.game h1 {
+    text-align: center;
+}
+
 .game h2 {
     position: absolute;
     top: 300px;
@@ -491,11 +495,12 @@ body {
 }
 
 .game-card a {
+    color: #e2612e;
     text-decoration: none;
 }
 
 .game-card a:hover {
-    color: #fff;
+    color: #f58a5f;
 }
 
 .game-card button {
@@ -504,7 +509,9 @@ body {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    border: none;
+    border-color: #8b89ff;
+    border-width: 2px;
+    border-style: solid;
     outline: none;
     border-radius: 4px;
     background-color: #423ffd;
@@ -513,6 +520,13 @@ body {
     left: 30px;
     font-size: 1rem;
     cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.game-card button:hover {
+    background-color: #e2612e;
+    border-color: #fc9973;
+    transition: 0.2s ease-in;
 }
 
 /* megnöveli a kártya méretét ha ráhúzzuk az egeret */
