@@ -171,3 +171,5 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
 text = "Download"
+
+[connection signal="pressed" from="Background/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Button" to="Background/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Button" method="_on_pressed"]
