@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://clhxp8vank88u"]
+[gd_scene load_steps=11 format=3 uid="uid://clhxp8vank88u"]
 
+[ext_resource type="Texture2D" uid="uid://ctkfmlrkrss2w" path="res://img/snake.png" id="1_ih0a2"]
 [ext_resource type="Texture2D" uid="uid://rucb6n1u5r6h" path="res://img/pong.png" id="1_lg4o4"]
 [ext_resource type="Script" path="res://script/SnakeLaunch.gd" id="2_1nhp2"]
+[ext_resource type="Texture2D" uid="uid://dowqqnqrvfiui" path="res://img/minesweeper.png" id="4_klg60"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q16sl"]
 bg_color = Color(0.207843, 0.207843, 0.207843, 1)
@@ -98,7 +100,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_lg4o4")
+texture = ExtResource("1_ih0a2")
 expand_mode = 1
 stretch_mode = 5
 
@@ -163,7 +165,7 @@ vertical_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="Background/MarginContainer/VBoxContainer/Panel/MarginContainer3/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("1_lg4o4")
+texture = ExtResource("4_klg60")
 expand_mode = 1
 stretch_mode = 5
 
