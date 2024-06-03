@@ -1,6 +1,6 @@
 extends Button
 
-@export var exe_link := "https://github.com/vb2007/2023-24-ikt-4/releases/download/v1.0-alpha/minesweeper.exe"
+@export var exe_link := "https://github.com/vb2007/2023-24-ikt-4/releases/download/v1.1/minesweeper.exe"
 @export var exe_path := "user://minesweeper.exe"
 
 var http_request: HTTPRequest
