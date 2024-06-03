@@ -1,7 +1,7 @@
 extends Button
 
-@export var exe_link := "https://github.com/vb2007/2023-24-ikt-4/releases/download/v1.0-alpha/snake.exe"
-@export var exe_path := "user://snake.exe"
+@export var exe_link := "https://github.com/vb2007/2023-24-ikt-4/releases/download/v1.0-alpha/minesweeper.exe"
+@export var exe_path := "user://minesweeper.exe"
 
 var http_request: HTTPRequest
 
@@ -37,7 +37,7 @@ func install_file(result: int, response_code: int, headers: PackedStringArray, b
 	self.disabled = false
 
 func start_game():
-	OS.shell_open(OS.get_user_data_dir() + "/snake.exe")
+	OS.shell_open(OS.get_user_data_dir() + "/minesweeper.exe")
 
 func _on_pressed() -> void:
 	if not file_exists(exe_path):

@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://clhxp8vank88u"]
+[gd_scene load_steps=13 format=3 uid="uid://clhxp8vank88u"]
 
 [ext_resource type="Texture2D" uid="uid://ctkfmlrkrss2w" path="res://img/snake.png" id="1_ih0a2"]
 [ext_resource type="Texture2D" uid="uid://rucb6n1u5r6h" path="res://img/pong.png" id="1_lg4o4"]
 [ext_resource type="Script" path="res://script/SnakeLaunch.gd" id="2_1nhp2"]
+[ext_resource type="Script" path="res://scene/PongLauncher.gd" id="4_f82e4"]
 [ext_resource type="Texture2D" uid="uid://dowqqnqrvfiui" path="res://img/minesweeper.png" id="4_klg60"]
+[ext_resource type="Script" path="res://scene/MinesweeperLauncher.gd" id="6_w24h0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q16sl"]
 bg_color = Color(0.207843, 0.207843, 0.207843, 1)
@@ -141,6 +143,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
 text = "Download"
+script = ExtResource("4_f82e4")
 
 [node name="MarginContainer3" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/Panel"]
 layout_mode = 0
@@ -173,5 +176,8 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
 text = "Download"
+script = ExtResource("6_w24h0")
 
 [connection signal="pressed" from="Background/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Button" to="Background/MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/VBoxContainer/Panel/MarginContainer2/VBoxContainer/Button" to="Background/MarginContainer/VBoxContainer/Panel/MarginContainer2/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/VBoxContainer/Panel/MarginContainer3/VBoxContainer/Button" to="Background/MarginContainer/VBoxContainer/Panel/MarginContainer3/VBoxContainer/Button" method="_on_pressed"]
