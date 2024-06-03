@@ -1,14 +1,14 @@
 extends Button
 
 # Link to the GitHub release
-@export var exe_link := "https://github.com/vb2007/2023-24-ikt-4/releases/download/v1.0-alpha/pong.exe"
-@export var exe_path := "user://pong.exe"
+@export var exe_link := "https://github.com/vb2007/2023-24-ikt-4/releases/download/v1.0-alpha/snake.exe"
+@export var exe_path := "user://snake.exe"
 
 var http_request: HTTPRequest
 
 func _ready() -> void:
-	self.disabled = true
-	check_integrity()
+	self.disabled = false
+	self.text = "Download"
 
 func file_exists(path: String) -> bool:
 	var dir := DirAccess.open("user://")
@@ -19,6 +19,7 @@ func download_file(link: String, path: String) -> void:
 	add_child(http_request)
 
 	self.text = "Downloading " + path.get_file()
+	self.disabled = true
 	http_request.request_completed.connect(install_file.bind(path))
 
 	var error := http_request.request(link)
@@ -36,16 +37,14 @@ func install_file(result: int, response_code: int, headers: PackedStringArray, b
 	self.text = "Start game"
 	self.disabled = false
 
-func check_integrity() -> void:
+func start_game():
+	OS.shell_open(OS.get_user_data_dir() + "/snake.exe")
+
+func _on_pressed() -> void:
 	if not file_exists(exe_path):
 		download_file(exe_link, exe_path)
 		print("No .exe file found. Downloading...")
 	else:
 		self.text = "Start game"
 		self.disabled = false
-
-func start_game():
-	OS.shell_open(OS.get_user_data_dir() + "/snake.exe")
-
-func _on_pressed():
-	start_game()
+		start_game()
